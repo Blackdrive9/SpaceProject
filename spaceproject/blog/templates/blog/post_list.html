@@ -1,7 +1,15 @@
 {% extends 'base.html' %}
-	{% block title %}
-		{{block.super}}-Contenuto
-	{% endblock title %}
+{% load static %}
+
+
+{% block head %}
+	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+	<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+{% endblock  %}
+
+{% block title %}
+	{{ block.super }}-Contenuto
+{% endblock %}
 
 {% block content %}
 	{% for post in posts %}
