@@ -3,17 +3,22 @@
 
 
 {% block head %}
-	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
-	<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-{% endblock  %}
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+{% endblock %}
 
 {% block title %}
-	{{ block.super }}-Contenuto
+{{ block.super }}-Contenuto
 {% endblock %}
 
 {% block content %}
-	{% for post in posts %}
-		<h2>{{ post.title }}</h2>
-		<p>{{ post.description }}</p>
-	{% endfor %}
+{% for post in posts %}
+<h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+<p>La Terra è il terzo pianeta del sistema solare, noto per ospitare una straordinaria varietà di forme di vita. Con
+    un'atmosfera che supporta la vita, acqua liquida in abbondanza e un ambiente unico, è il nostro unico pianeta
+    conosciuto in grado di sostenere la vita. Caratterizzato da vaste terre, oceani profondi e una ricca biodiversità,
+    la Terra è il luogo ideale per la presenza di una grande varietà di ecosistemi e ambienti. La sua orbita attorno al
+    Sole, insieme a una serie di condizioni uniche, ha creato un ambiente perfetto per la complessità e la diversità
+    della vita che ospita.</p>
+{% endfor %}
 {% endblock %}

@@ -1,0 +1,17 @@
+body {
+    background-color: #001f3f; /* Blu scuro */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #ffffff; /* Colore del testo */
+
+}
+
+.contenuto {
+    margin: 20px;
+}
+
+.navbar {
+    background-color: #333; /* Colore di sfondo navbar dark */
+    color: white; /* Colore del testo della navbar */
+    padding: 15px;
+}
